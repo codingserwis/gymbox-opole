@@ -64,9 +64,10 @@ gulp.task('browser-sync', function() {
 });
 
 // watch for files
-gulp.task('watch', ['browser-sync', 'sass'], function() {
+gulp.task('watch', ['browser-sync', 'sass', 'images'], function() {
 	gulp.watch('prod/sass/**/*.scss', ['sass']);
 	gulp.watch('prod/**/*.+(html|js)', ['copy']);
+	gulp.watch('prod/img/**/*.+(jpg|png|svg)', ['images']);
 });
 
 // gulp default task
