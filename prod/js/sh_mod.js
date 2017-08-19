@@ -1,9 +1,9 @@
 // *** Konstruktory 
 
-var NowWod = function(){
+let NowWod = function(){
 	this.nowWod = document.getElementById('wod_now');
 }
-var NextWod = function(){
+let NextWod = function(){
 	this.nextWod = document.getElementById('next_wod');
 }
 
@@ -26,9 +26,26 @@ var wods = [
 			["FitBox"],
 			["Ciężary"],
 ];
+const newWods = {
+	start: {
+		start8: 'Zaczynamy o 8:30',
+		start9: 'Zaczynamy o 9:00'
+	},
+	rest: {
+		restNextDay8: 'Odpoczywamy. Zapraszamy jutro od 8:30',
+		restNextDay9: 'Odpoczywamy. Zapraszamy jutro od 9:30',
+		restStart15: 'Odpoczywamy. zapraszamy od 15:00'
+	},
+	wod: {
+		wodCoachOne: 'WOD Łukasz',
+		wodCoachSecond: 'WOD Romek'
+	},
+	
+	openBox: 'OPEN Box'
+}
 function checkDayOfWeek(){
-	var whatDayOfWeek = new Date().getDay();
-	var dayOfWeek = "";
+	let whatDayOfWeek = new Date().getDay();
+	let dayOfWeek = "";
 	
 	if(whatDayOfWeek === 0){
 		dayOfWeek = "Su";
@@ -48,9 +65,9 @@ function checkDayOfWeek(){
 return dayOfWeek;
 }
 function weekShedule(){
-var nowTime = new Date().toLocaleTimeString();
-var now = new NowWod();
-var next = new NextWod();
+let nowTime = new Date().toLocaleTimeString();
+let now = new NowWod();
+let next = new NextWod();
 // Poniedziałek
 if(checkDayOfWeek() === "Mon"){
 	if(nowTime < "08:30:00"){
@@ -242,8 +259,8 @@ if(checkDayOfWeek() === "Sa"){
 			now.displayNowWod(wods[2][1]);
 			next.displaynextWod(wods[1][3]);	
 		} else if((nowTime > "11:00:01") && (nowTime < "23:59:59")){
-			now.displayNowWod(wods[1][1]);
-			next.displaynextWod(wods[2][0]);	
+			now.displayNowWod(newWods.rest.restNextDay9);
+			next.displaynextWod(newWods.openBox);	
 		}
 	}
 // *** Niedziela ***

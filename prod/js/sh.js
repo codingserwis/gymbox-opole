@@ -1,9 +1,9 @@
 // *** Konstruktory 
 
-	var NowWod = function(){
+	let NowWod = function(){
 		this.nowWod = document.getElementById('wod_now');
 	}
-	var NextWod = function(){
+	let NextWod = function(){
 		this.nextWod = document.getElementById('next_wod');
 	}
 
@@ -27,8 +27,8 @@ var wods = [
 				["Ciężary"],
 ];
 function checkDayOfWeek(){
-		var whatDayOfWeek = new Date().getDay();
-		var dayOfWeek = "";
+		let whatDayOfWeek = new Date().getDay();
+		let dayOfWeek = "";
 		
 		if(whatDayOfWeek === 0){
 			dayOfWeek = "Su";

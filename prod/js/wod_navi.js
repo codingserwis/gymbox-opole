@@ -1,11 +1,11 @@
 function workoutNavi(){
-	var tabAll = document.getElementById('all_workouts');
-	var tabWod = document.getElementById('table_wod');
-	var tabTrx = document.getElementById('trx');
-	var tabLejdis = document.getElementById('lejdis');
-	var tabStudent = document.getElementById('student');
-	var tabWeights = document.getElementById('weights');
-	var tabOpen = document.getElementById('open');
+	let tabAll = document.getElementById('all_workouts');
+	let tabWod = document.getElementById('table_wod');
+	let tabTrx = document.getElementById('trx');
+	let tabLejdis = document.getElementById('lejdis');
+	let tabStudent = document.getElementById('student');
+	let tabWeights = document.getElementById('weights');
+	let tabOpen = document.getElementById('open');
 
 			if(this.dataset.link === "allworkouts"){
 				tabAll.style.display = "inline-block";
@@ -65,9 +65,9 @@ function workoutNavi(){
 				tabOpen.style.display = "inline-block";
 			}
 		}
-document.addEventListener("DOMContentLoaded", function() {
-	var link = document.querySelectorAll('a[data-link]');
-		for(var i = 0; i < link.length; i++){
-			link[i].addEventListener('click', workoutNavi);
-		}
+document.addEventListener("DOMContentLoaded", () => {
+	let link = document.querySelectorAll('a[data-link]');
+		link.forEach((element) => {
+			element.addEventListener('click', workoutNavi);
+		});
 });
