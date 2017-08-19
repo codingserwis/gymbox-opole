@@ -1,0 +1,2 @@
+"use strict";var checkDay=function(){var n=function(){this._nowWod=document.getElementById("wod_now")};n.prototype.displayNowWod=function(n){this._nowWod.innerText=n};var t=function(){var n=(new Date).getDay(),t="";return 0===n?t="Su":1===n?t="Mon":2===n?t="Tu":3===n?t="Wed":4===n?t="Th":5===n?t="Fr":6===n&&(t="Sa"),t},o=function(){var o=new n;return"Mon"==t()?o.displayNowWod("Poniedziałek"):"inny dzień"};return{init:function(){o()}}}();checkDay.init();
+//# sourceMappingURL=sh_mod.js.map

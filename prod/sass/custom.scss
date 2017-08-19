@@ -1,8 +1,11 @@
-// +++ variables +++
-@import 'variables/_variables';
+// *** ZMIENNE
+@import 'modules/_var';
 
-// +++ mixins +++
-@import 'mixins/_mixins';
+// *** MIXINS
+@import 'modules/_mixins';
 
-// +++ partials +++
-@import 'partials/_partials';
+// *** CONTENT
+@import 'partials/_content';
+
+// *** RWD
+@import 'partials/_rwd';

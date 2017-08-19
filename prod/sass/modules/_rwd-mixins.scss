@@ -1,0 +1,22 @@
+// *** DEVICE WIDTHS ***
+$small-phones: 320px;
+$tablets: 767px;
+$small-desktops: 991px;
+$lg-dev: 768px;
+// $large-desktop: ;
+
+@mixin sm-phones {
+	@media (min-width: #{$small-phones}) and (max-width: #{$tablets}){
+		@content;
+	}
+}
+@mixin middle-dev {
+	@media (min-width: #{$tablets} + 1) and (max-width: #{$small-desktops}){
+		@content;
+	} 
+}
+@mixin lg-dev {
+	@media (min-width: #{$lg-dev}){
+		@content;
+	}
+}
