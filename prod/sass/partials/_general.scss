@@ -1,0 +1,81 @@
+/**
+ * +++ +++ CONFIG +++ +++
+ */
+// +++ text colors +++
+$text-black: map-get($font-colors, black);
+
+// +++ links colors +++
+$link-color: map-get($link-colors, white);
+$link-visited: map-get($link-colors, white);
+$link-hover: map-get($link-colors, white);
+
+// +++ bcg colors +++
+$red-bcg: map-get($colors, red);
+$black-bcg: map-get($colors, black);
+
+// +++ general content +++
+html {
+	font-family: $main-font;
+	font-size: 16px;
+	color: $text-black;
+	font-weight: 300;
+}
+body {
+	position: relative;
+}
+a {
+	text-decoration: none;
+	color: $link-color;
+		&:hover {
+			color: $link-hover;
+		}
+		&:visited {
+			color: $link-visited;
+		}
+}
+ul {
+	list-style-type: none;
+}
+li {
+	display: inline-block;
+}
+// +++ content general +++
+.margin__top-10 {
+	margin-top: 10px;
+}
+.padding__all-6 {
+	padding: 6px;
+}
+.padding__right-10 {
+	padding-right: 10px;
+}
+.padding__right-15 {
+	padding-right: 15px;
+}
+.padding__right-25 {
+	padding-right: 25px;
+} 
+.bg_red {
+	background-color: $red-bcg;
+}
+.bg_black {
+	background-color: $black-bcg;
+}
+.social_icon {
+	width: 1.525rem;
+	height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
