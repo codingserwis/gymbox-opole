@@ -1,0 +1,63 @@
+// *** ANIMATIONS ***
+@mixin animation-slide-top ($animation_name){
+	@keyframes #{$animation_name} {
+		0% {
+			opacity: 0;
+			transform: translateY(70%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0%);
+		}
+	}
+	@-webkit-keyframes #{$animation_name} {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(70%);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0%);
+		}
+	}
+	.#{$animation_name} {
+		animation-name: $animation_name;
+		-webkit-animation-name: $animation_name;
+		animation-duration: 1s;
+		-webkit-animation-duration: 1s;
+		visibility: visible;
+	}
+}
+@mixin animation-slide-to-bottom ($animation_name){
+	@keyframes #{$animation_name} {
+		0% {
+			opacity: 0;
+			transform: translateY(-70%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0%);
+		}
+	}
+	@-webkit-keyframes #{$animation_name} {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(-70%);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0%);
+		}
+	}
+	.#{$animation_name}{
+		animation-name: $animation-name;
+		-webkit-animation-name: $animation-name;
+		animation-duration: 1s;
+		-webkit-animation-duration: 1s;
+		visibility: visible;
+	}
+}
+// *** TRANSITIONS ***
+@mixin transition ($property...){
+	transition: $property;
+}

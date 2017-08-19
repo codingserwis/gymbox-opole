@@ -1,0 +1,507 @@
+// *** ANIMATIONS ***
+.slidein, .slideout {
+	visibility: hidden;
+}
+@include animation-slide-top (slide_top);
+@include animation-slide-to-bottom(slide_buttom);
+
+// *** GENERAL ***
+html {
+	font-family: $main-font;
+	font-size: 14px;
+	color: $main-text-color;
+}
+body {
+	position: relative;
+	font-family: $main-font;
+	font-size: 14px;
+	color: $main-text-color;
+}
+a {
+	color: $a-color;
+	text-decoration: none;
+		&:hover {
+			color: $a-hover-color;
+		}
+		&:visited {
+			color: $a-visited-color;
+			text-decoration: none;
+		}
+}
+ul {
+	list-style-type: none;
+}
+li {
+	display: inline-block;
+}
+.margin_20 {
+	margin: 20px 0;
+}
+.to_right {
+	float: right;
+}
+.font_white {
+	color: $font-white;
+}
+.bg_red {
+	background-color: $main-red;
+}
+.bg_black {
+	background-color: $black;
+}
+.table-responsive {
+	border: none;
+}
+.svg_icon {
+	width: 15%;
+	height: 4.5rem;
+	margin-top: 20px;
+}
+a {
+ 	.fb_svg_logo {
+		stroke: #4E71A8;
+		fill: $contact-bg;
+		transition: fill 0.5s;
+	}
+	
+	&:hover {
+		.fb_svg_logo {
+			fill: #4E71A8;
+		}
+	}
+}
+
+.social {
+	margin-top: 0;
+	width: 5%;
+	height: 1.650rem;
+} 
+
+// *** SCROLL TO TOP ***
+.scroll_top {
+	opacity: 0;
+	padding: 11px 0;
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	width: 40px;
+	height: 40px;
+	background-color: rgba($main-red, 1.0);
+	border-radius: 50%;
+	text-align: center;
+}
+
+// *** HEADER ***
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	width: 100%;
+	min-height: 25vh;
+}
+.social_icon {
+	width: 24px;
+	height: auto;
+}
+
+// *** HEADER NAVIGATION ***
+.collapsing {
+	background-color: $white;
+	text-align: center;
+}
+.navbar-collapse.in {
+	background-color: $white;
+	width: 100%;
+	text-align: center;
+	ul {
+		li {
+			a {
+				color: $main-text-color;
+			}
+		}
+	}
+}
+.navbar-toggle {
+	border: none;
+	color: rgba($white, 1.0);
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: rgba($white, 1.0);
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	margin-top: 10px;
+}
+
+.navbar {
+	min-height: 65px;
+	border: none;
+	background-color: transparent;
+	background-image: none;
+	box-shadow: none;
+	margin-bottom: 0;
+}
+.navbar-default .navbar-nav>li>a {
+	font-size: 1.500rem;
+	color: rgba($white, 1.0);
+	padding: 23px 10px;
+	text-shadow: none;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+	color: rgba($main-red, 1.0);
+	background-color: transparent;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a {
+	background-color: transparent;
+	background-image: none;
+	box-shadow: none;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+	color: rgba($main-red, 1.0);
+}
+.small_header {
+	z-index: 10;
+	background-color: rgba($white, 1.0);
+	min-height: 10vh;
+	box-shadow:  0 1px 5px 1px rgba(0,0,0,0.2);
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: $transparent;
+}
+// *** GENERL SECTION ***
+.section_title {
+	font-family: $section-font;
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.section_title_desc {
+	font-family: $section-font;
+	margin: 20px 0 40px 0;
+	font-size: 1.557rem;
+	line-height: 30px;
+}
+// *** SECTION START ***
+.section_start {
+	min-height: 100vh;
+	background: url('../img/start-sm-bg.jpg') 0 0 no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.schedule {
+	position: absolute;
+	top: 35vh;
+	right: 11.5%;
+	// width: 550px;
+	// height: 320px;
+	padding: 25px;
+	background-color: rgba($schedule-bgk, 0.7);
+}
+.schedule_heading {
+	text-transform: uppercase;
+	font-family: $section-font;
+}
+.schedule_now {
+	font-size: 1.750rem;
+	color: $font-white;
+	background-color: rgba($schedule-now-bgk, 1.0);
+	padding: 10px 0;
+}
+.schedule_next {
+	font-size: 1.750rem;
+	color: $font-white;
+	background-color: rgba($main-red, 1.0);
+	padding: 10px 0;
+}
+// *** SECTION NEWS ***
+.section_news {
+	background-color: rgba($schedule-bgk, 1.0);
+	padding: 50px 0;
+}
+.news_thumbnail {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+%news_thumbnail {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+.efficency {
+	@extend %news_thumbnail;
+	background: url('../img/efficiency.jpg') 0 0 no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.strength {
+	@extend %news_thumbnail;
+	background: url('../img/strength.jpg') 0 0 no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.condition {
+	@extend %news_thumbnail;
+	background: url('../img/coditioning.jpg') 0 0 no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.news_slogan {
+	margin: 0 0 20px 0;
+	font-family: $section-font;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.news_inner {
+	margin-top: 10px;
+	font-size: 3.000rem;
+	color: $main-red;
+}
+// *** SECTION SCHEDULE ***
+.section_schedule {
+	min-height: 85vh;
+	padding: 100px 0;
+	background: url('../img/graphic-sm-bg.jpg') 0 0 no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.schedule_nav {
+	margin-bottom: 25px;
+		li {
+			padding-right: 15px;
+				a {
+					cursor: pointer;
+					color: $font-white;
+					font-size: 1.150rem;
+					font-weight: 300;
+				}
+		}
+}
+#schedule_table_next > tbody > tr > td,
+#all_workouts > thead > tr > th, #all_workouts > tbody > tr > td,
+#table_wod > thead > tr > th, #table_wod > tbody > tr > td,
+#trx > thead > tr > th, #trx > tbody > tr > td,
+#lejdis > thead > tr > th, #lejdis > tbody > tr > td,
+#student > thead > tr > th, #student > tbody > tr > td,
+#weights > thead > tr > th, #weights > tbody > tr > td,
+#open > thead > tr > th, #open > tbody > tr > td {
+	color: $font-white;
+	font-size: 0.950rem;
+	font-weight: 300;
+	padding: 18px 7px;
+	text-align: center;
+	vertical-align: middle;
+	width: 10%;
+}
+
+// *** COLORS FOR SCHEDULE TABLE TD ***
+.open_box {
+	background-color: rgba($open-box, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+			background-color: rgba($open-box, 1.0);
+		}
+}
+.wod_peeter {
+	background-color: rgba($wod-peeter, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+			background-color: rgba($wod-peeter, 1.0);
+		}
+}
+.wod_luk_d {
+	background-color: rgba($wod-dabachi, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+			background-color: rgba($wod-dabachi, 1.0);
+		}
+}
+.fit_box {
+	background-color: rgba($fit-box, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+			background-color: rgba($fit-box, 1.0);
+		}
+}
+.cross_lejdis {
+	background-color: rgba($cr-lejdis, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+			background-color: rgba($cr-lejdis, 1.0);
+		}
+}
+.cross_stud {
+	background-color: rgba($cr-student, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+				background-color: rgba($cr-student, 1.0);
+		}
+}
+.trx {
+	background-color: rgba($trx, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+			background-color: rgba($trx, 1.0);
+		}
+}
+.wod_basic {
+	background-color: rgba($wod-basic, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+				background-color: rgba($wod-basic, 1.0);	
+		}
+}
+.weights {
+	background-color: rgba($weights, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+			background-color: rgba($weights, 1.0);
+		}
+}
+.wod_przem {
+	background-color: rgba($wod-przem, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+			background-color: rgba($wod-przem, 1.0);
+		}
+}
+.wod_luk_sz {
+	background-color: rgba($wod-szetela, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+			background-color: rgba($wod-szetela, 1.0);
+		}
+}
+.wod_romek {
+	background-color: rgba($wod-romek, 0.5);
+	@include transition(background-color, 0.2s);
+		&:hover {
+			background-color: rgba($wod-romek, 1.0);
+		}
+}
+.btn_sched {
+	background-image: none;
+	background-color: $black;
+	border: 1px solid $black;
+	border-bottom: 2px solid $white;
+	border-radius: 0;
+	font-size: 1.500rem;
+	font-weight: 300;
+	padding: 16px 12px;
+}
+.well {
+	border: none;
+	border-bottom: 2px solid $white;
+	border-radius: 0;
+	background-color: $transparent;
+	background-image: none;
+}
+.small_sched {
+	color: $font-white;
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 300;
+	border-bottom: 1px solid $white;
+	padding: 10px 0;
+}
+// *** SECTION PRICE LIST ***
+.section_price_list {
+	background-color: $schedule-bgk;
+	padding: 100px 0;
+}
+caption {
+	font-size: 1.5rem;
+	color: $main-text-color;
+}
+#pricelist_cross > tbody > tr > td, #pricelist_cross > tbody > tr > th, 
+#pricelist_lejdis > tbody > tr > td, #pricelist_lejdis > tbody > tr > th {
+	color: $main-text-color;
+	font-size: 1.250rem;
+	font-weight: 300;
+	text-align: center;
+	vertical-align: middle;
+	padding: 18px 7px;
+	width: 10%;
+	@include transition(background-color, 0.3s);
+}
+#pricelist_cross > tbody > tr:hover > td, #pricelist_lejdis > tbody > tr:hover > td {
+	background-color: $black;
+	color: $font-white;
+}
+// *** SECTION CONTACT ***
+.section_contact {
+	background-color: $contact-bg;
+	padding: 110px 0;
+}
+.addres {
+	margin-top: 20px;
+	font-size: 1.700rem;
+	font-weight: 500;
+}
+.contact_social_icon {
+	width: 50px;
+	height: auto;
+	margin: 25px 0 5px 0;
+}
+#map {
+	height: 300px;
+}
+// *** FOOTER ***
+.footer {
+	padding: 30px;
+}
+.footer_nav {
+	font-size: 1.35rem;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+.footer_copy {
+	margin-top: 20px;
+	font-weight: 300;
+	font-size: 0.9rem;
+}
+// *** COOKIE INFO ***
+.cookie_main {
+	display: block;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 5vh;
+	background-color: rgba(0,0,0, 0.8);
+	padding: 6px;
+	text-align: center;
+}
+.cookie_text {
+	margin: 0;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 300;
+		.btn-info {
+			background-color: transparent;
+			background-image: none;
+		}
+}
+.cc_btn {
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	margin-left: 25px;
+
+}
+.hide {
+	display: none;
+}
+// *** ERROR 404 PAGE ***
+.section_error {
+	min-height: 100vh;
+	background-color: $schedule-bgk;
+}

@@ -1,0 +1,49 @@
+// *** RWD ***
+@import 'modules/_rwd-mixins';
+
+@include sm-phones {
+	.margin_top {
+		margin-top: 10%;
+	}
+	.padding_top_bottom {
+		padding: 5% 0;
+	}
+	.pull-right {
+		float: none;
+	}
+	.schedule {
+		position: absolute;
+		top: 25%;
+		right: 0;
+	}
+	.navbar {
+		min-height: 0;
+	}
+	.navbar-toggle {
+		margin-top: 0;
+	}
+	.img-responsive {
+		margin-bottom: 10px;
+	}
+}
+
+@include middle-dev {
+	.news_inner {
+		font-size: 2.200rem;
+	}
+}
+
+@include lg-dev {
+	.section_start {
+		background: url('../img/start-big-bg.jpg') 0 0 no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	.section_schedule {
+		background: url('../img/graphic-big-bg.jpg') 0 0 no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+}
